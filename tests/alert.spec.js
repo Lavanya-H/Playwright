@@ -27,7 +27,7 @@ test.describe('working with alerts', async () => {
         page.on('dialog', async dialog => {
             expect(dialog.message()).toBe('I am a JS prompt');
              await page.waitForTimeout(4000)
-            await dialog.accept("lavanya");
+            await dialog.accept("MaruthiPrasad PC");
         })
         await page.locator('//button[text()="Click for JS Prompt"]').click()
 })
