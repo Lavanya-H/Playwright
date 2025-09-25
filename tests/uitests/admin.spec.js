@@ -1,7 +1,7 @@
 
 import { test } from '@playwright/test';
-import { loginPage } from "../pageobject/login.po";
-import { addemployeepage } from "../pageobject/admin.po";
+import { loginPage } from "../../pageobject/login.po";
+import { addemployeepage } from "../../pageobject/admin.po";
 
 
 test.describe("verify login functionality", async () => {
@@ -15,7 +15,7 @@ test.describe("verify login functionality", async () => {
         login = new loginPage(page);
         addemployee = new addemployeepage(page);
         await login.navigate();
-        await login.loginwithcreds("Admin","admin123");
+        await login.loginwithcreds("Admin", "admin123");
         await login.success();
         await addemployee.navigateToPIM();
         await addemployee.navigateToaddemployee();

@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import fs from "fs"
 test.describe('working with alerts', async () => {
     test('working with downloadfile', async ({ page }) => {
         await page.goto("https://the-internet.herokuapp.com/download")
@@ -9,7 +10,7 @@ test.describe('working with alerts', async () => {
         const suggestedFilename = download.suggestedFilename();
         const filepath = 'tests/download/' + suggestedFilename;
         await download.saveAs(filepath);
-        expect(fstat.existsSync(filepath)).toBeTruthy()//whether file is download or not
+        expect(fs.existsSync(filepath)).toBeTruthy()//whether file is download or not
     })
     test('working with multiple files download', async ({ page }) => {
         await page.waitForTimeout(6000)

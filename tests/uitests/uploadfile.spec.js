@@ -7,6 +7,7 @@ test.describe('working with uploadfile', async () => {
     await expect(page.locator('#uploaded-files')).toHaveText('lavi.jpg')
     await expect(page.locator('//div[@class="example"]/h3')).toBeVisible('File Uploaded!')
     
+    
 
 
     })

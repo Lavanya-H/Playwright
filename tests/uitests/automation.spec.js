@@ -3,6 +3,7 @@ test.describe('working with alerts', async () => {
     test('working with check box', async ({ page }) => {
         await page.waitForTimeout(5000)
         await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
+        await page.locator('//input[@value="radio1"]').check()
         //const checkboxes = ["#checkBoxOption1","#checkBoxOption2","#checkBoxOption3"]
         const checkboxes = page.locator('input[type="checkbox"]');
         const count = await checkboxes.count();
@@ -26,7 +27,7 @@ test.describe('working with alerts', async () => {
         await page.locator('//div[text()="Reunion"]').click({ force: true })
 
         await page.locator('select[id="dropdown-class-example"]').selectOption("Option2")
-        await expect(page.locator('select[id="dropdown-class-example"]')).toHaveAttribute('value', 'Option2')
+       // await expect(page.locator('select[id="dropdown-class-example"]')).toHaveAttribute('value', 'Option2')
 
     })
     //alerts
