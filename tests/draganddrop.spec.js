@@ -11,6 +11,6 @@ test('check the check box', async ({ page }) => {
     const hamburger = await page.locator('#menu-fried-chicken')
     const targetlocator = await page.locator('#plate-items')
     await sourcechicken.dragTo(targetlocator)
-    await icecream.dragTo(targetlocator)
+    aqcecream.dragTo(targetlocator)
     await hamburger.dragTo(targetlocator)
 })
